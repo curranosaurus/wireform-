@@ -28,7 +28,7 @@ foreign import ccall unsafe "hs_columnar_bitmap_popcount"
   c_bitmap_popcount :: Ptr Word8 -> CInt -> Int32
 
 
-foreign import ccall unsafe "hs_columnar_unpack_bits_lsb"
+foreign import ccall safe "hs_columnar_unpack_bits_lsb"
   c_unpack_bits_lsb :: Ptr Word8 -> Int32 -> Ptr Word8 -> IO ()
 
 
