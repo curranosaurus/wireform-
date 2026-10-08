@@ -559,7 +559,7 @@ compareBoundsBS boundsBs count width searchBs = unsafePerformIO $
 -- SIMD Arrow IPC buffer validation
 ------------------------------------------------------------------------
 
-foreign import ccall unsafe "hs_proto_validate_arrow_buffers"
+foreign import ccall safe "hs_proto_validate_arrow_buffers"
   c_validate_arrow_buffers :: Ptr () -> CInt -> Int64 -> CInt
 
 
